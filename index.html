@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Tic-Tac-Toe Game</h1>
+
+        <div class="rules">
+            <h2>Rules</h2>
+            <ul>
+                <li>Player X and Player O take turns to place their mark on the grid.</li>
+                <li>The first player to get 3 marks in a row (horizontally, vertically, or diagonally) wins.</li>
+                <li>If all cells are filled and no player has won, it's a draw.</li>
+            </ul>
+        </div>
+
+        <div class="scoreboard">
+            <div class="player-score" id="playerXScoreDiv">
+                <h3>Player X</h3>
+                <p id="playerXScore">0</p>
+            </div>
+            <div class="player-score" id="playerOScoreDiv">
+                <h3>Player O</h3>
+                <p id="playerOScore">0</p>
+            </div>
+        </div>
+
+        <div class="round-counter" id="roundCounter">Round: 1</div>
+
+        <div class="game-board" id="gameBoard">
+            <!-- Game cells -->
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="resetButton">Reset Game</button>
+
+        <footer>
+            <p>V</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

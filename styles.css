@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a1b9a, #ff5722);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.rules {
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+.rules ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rules li {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-top: 30px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.player-score {
+  text-align: center;
+  background: #2196f3;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.player-score h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.player-score p {
+  font-size: 2em;
+  font-weight: bold;
+  background: #ffeb3b;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Round Counter */
+.round-counter {
+  font-size: 1.5em;
+  background: #ff5722;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Centered Game Board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin: 20px auto; /* Center horizontally */
+  justify-content: center; /* Align items in the center horizontally */
+  position: relative;
+}
+
+.cell {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+.winning-line {
+  position: absolute;
+  height: 5px;
+  background: #ffeb3b;
+  border-radius: 5px;
+  transform-origin: 0 50%;
+  transition: all 0.3s ease;
+}
+
+/* Reset Button */
+#resetButton {
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#resetButton:hover {
+  background: #c2185b;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer a {
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-shadow: 0 0 10px #ffeb3b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 8px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+
+  .player-score, .round-counter {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
